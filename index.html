@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conway's Game of Life</title>
+    <link type='text/css' rel='stylesheet' href='./index.css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="./index.js"></script>
+  </head>
+  <body>
+    <h1>Conway's Game of Life</h1>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+        <div class='square col-xs-1'>
+        </div>
+      </div>
+    </div>
+    <button class='run-btn btn btn-info'>Run Generation</button>
+  </body>
+</html>
