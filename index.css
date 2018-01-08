@@ -1,7 +1,77 @@
-.square {
-  border: 1px solid black;
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif !important;
+  text-align: center;
+  background-image: url('./earth.jpg');
+  background-size: cover;
+  color: white !important;
+}
+
+header {
   width: 100%;
-  height: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  position: relative;
+  margin: 0 !important;
+  animation: 1s linear 0s slideup;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    top: 50px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.rules {
+  position: relative;
+  opacity: 0;
+  animation: 1s linear 1s slideleft;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    right: 50px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 50px;
+  flex-grow: 1;
+  align-items: center;
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.square {
+  border: 1px solid gray;
+  width: 40px;
+  height: 40px;
+  align-self: flex-start;
 }
 
 .row {
@@ -10,9 +80,9 @@
 }
 
 .alive {
-  background-color: green;
+  background-color: white;
 }
 
 .dead {
-  background-color: red;
+  background-color: black;
 }

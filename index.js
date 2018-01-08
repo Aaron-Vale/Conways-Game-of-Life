@@ -3,6 +3,11 @@ $(document).ready(function() {
   buildGameBoard()
 })
 
+let gameBoard = []
+let intervalId
+const xMax = 25
+const yMax = 25
+
 
 function setEventListeners() {
   $('.square').click(function() {
@@ -19,7 +24,13 @@ function setEventListeners() {
     }
   })
 
-  $('.run-btn').click(runGeneration)
+  $('.run-btn').click(function() {
+    intervalId = setInterval(runGeneration, 200);
+  })
+
+  $('.stop-btn').click(function() {
+    clearInterval(intervalId)
+  })
 }
 
 class Square {
@@ -30,11 +41,6 @@ class Square {
     this.next = null
   }
 }
-
-
-let gameBoard = []
-const xMax = 12
-const yMax = 12
 
 function buildGameBoard() {
   for (let y = yMax-1; y >= 0; y--) {
@@ -49,8 +55,6 @@ function buildGameBoard() {
     squares[i].dataset.boardIndex = i
     $(squares[i]).addClass('dead')
   }
-  console.log(gameBoard)
-  console.log(squares)
 }
 
 // Returns a square at a given (x, y)
@@ -101,15 +105,25 @@ function findNeighbors(square) {
 }
 
 function nextState() {
+  let sameState = true // track if any changes made, so sim can auto-stop
   const squares = document.getElementsByClassName('square')
   for (let i = 0; i < squares.length; i++) {
     if (gameBoard[i].next) {
+      if (!gameBoard[i].alive) {
+        sameState = false
+      }
       gameBoard[i].alive = true
       $(squares[i]).removeClass('dead').addClass('alive')
     } else {
+      if (gameBoard[i].alive) {
+        sameState = false
+      }
       gameBoard[i].alive = false
       $(squares[i]).removeClass('alive').addClass('dead')
     }
+  }
+  if (sameState) {
+    clearInterval(intervalId)
   }
 }
 

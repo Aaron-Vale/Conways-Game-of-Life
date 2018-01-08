@@ -3,6 +3,7 @@
   <head>
     <title>Conway's Game of Life</title>
     <link type='text/css' rel='stylesheet' href='./index.css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,321 +12,1273 @@
     <script type='text/javascript' src="./index.js"></script>
   </head>
   <body>
-    <h1>Conway's Game of Life</h1>
-    <div class='container-fluid'>
-      <div class='row'>
-        <div class='square col-xs-1'>
+    <header>
+      <h1>Conway's Game of Life</h1>
+      <div class='rules'>
+        <h2>Rules</h2>
+        <ul>
+          <li>Any live cell with fewer than two live neighbours dies (referred to as underpopulation or exposure).</li>
+          <li>Any live cell with more than three live neighbours dies (referred to as overpopulation or overcrowding).</li>
+          <li>Any live cell with two or three live neighbours lives, unchanged, to the next generation.</li>
+          <li>Any dead cell with exactly three live neighbours will come to life.</li>
+        </ul>
+        <h3>Click on squares to set them as 'alive' and then click 'run' to start.</h3>
+      </div>
+      <button class='run-btn btn btn-info'>Run</button>
+      <button class='stop-btn btn btn-danger'>Stop</button>
+    </header>
+    <div class='board'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
         </div>
-        <div class='square col-xs-1'>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
+        </div>
+        <div class='square '>
         </div>
       </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-        <div class='square col-xs-1'>
-        </div>
-      </div>
-    </div>
-    <button class='run-btn btn btn-info'>Run Generation</button>
+      <small>Made by <a href='https://aaron-vale.github.io'>Aaron Vale</a> and Alex Duh</small>
   </body>
 </html>
